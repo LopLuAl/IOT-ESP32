@@ -15,11 +15,11 @@
       <?php
         include_once 'escrbir_g.php';
       ?>
-
+      
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-          <button type="submit" name="target1" value="Target 1" class="btn btn-primary" >   d</button>
-          <input  type="submit" name="target2" value="Target 2" class="btn btn-primary"></button>
-          <input  type="submit" name="target3" value="Target 3" class="btn btn-primary"></button>
+          <input type="submit" name="target1" value="Target 1" class="btn btn-primary"></button>
+          <input type="submit" name="target2" value="Target 2" class="btn btn-primary"></button>
+          <input type="submit" name="target3" value="Target 3" class="btn btn-primary"></button>
       </form>
       <h3 class="text-center">ET N ° 12</h3>
       <div class="table-responsive-sm">

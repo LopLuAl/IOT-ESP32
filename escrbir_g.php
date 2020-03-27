@@ -3,6 +3,12 @@
 $target1 = 0;
 $target2 = 0;
 $target3 = 0;
+
+$textfile = "LEDstate.txt";
+
+$fileLocation = "$textfile";
+$fh = fopen($fileLocation, 'w   ') or die("Algo Fallo"); // Esto abre el archivo .txt para escribir y remplaza su contenido
+
 $conn = new mysqli("127.0.0.1", "root", "", "luciano");
 if ($conn->connect_error) {
     die("error: " . $conn->connect_error);
@@ -15,6 +21,11 @@ if ($result->num_rows > 0) {
         $target3 = $row["Target3"];
     }
 }
+
+$stringToWrite = "$target1 $target2 $target3"; // Escribe 1 o 0 dependiendo de la respuesta obtenida en index.html
+fwrite($fh, $stringToWrite); // Escribe sobre el archivo .txt
+
+
 echo "Target 1: " . $target1 . "<br>";
 echo "Target 2: " . $target2 . "<br>";
 echo "Target 3: " . $target3 . "<br>";
@@ -41,5 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 $conn->close();
+fclose($fh);
 
 ?>
