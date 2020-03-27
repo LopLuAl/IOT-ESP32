@@ -30,8 +30,22 @@ if ($result->num_rows > 0) {
 
 $stringToWrite = "$target1 $target2 $target3"; // Escribe 1 o 0 dependiendo de la respuesta obtenida en index.html
 fwrite($fh, $stringToWrite); // Escribe sobre el archivo .txt
+if ((isset($_GET['temp'])) && (isset($_GET['hum']))&&(isset($_GET['lux'])))
+{
 
-
+    $temp = $_GET['temp'];
+    $hum  = $_GET['hum'];
+	  $lux  = $_GET['lux'];
+    $conn->query("UPDATE devices SET temp=$temp WHERE `ID`=1");
+    $conn->query("UPDATE devices SET hum=$hum WHERE `ID`=1");
+    $conn->query("UPDATE devices SET lux=$lux WHERE `ID`=1");
+}/*
+echo $temp;
+echo'<br>';
+echo $hum ;
+echo'<br>';
+echo $lux;
+echo'<br>';*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["target1"])) {

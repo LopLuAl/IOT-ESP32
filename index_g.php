@@ -5,6 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+      <meta http-equiv="refresh" content="10" > 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
@@ -12,10 +13,12 @@
       <title>IOT!</title>
     </head>
 
-    <body class = "bg-dark">
+    <body class = "bg-sucess">
 
-        <h2 class="text-center">ET N ° 12</h2>
-        <h3 class="text-center">CONTROL SALIDAS</h3>
+        <h2 class="text-center" class="text-info">ET N ° 12</h2>
+        <hr style="border-color:red;">
+        <h3 class="text-center" class="text-info">CONTROL SALIDAS</h3>
+
         <?php
           include_once 'escrbir_g.php';
         ?>
@@ -27,15 +30,19 @@
             <button type="submit" name="target3" value="Target 3" class="btn btn-primary">Relay_3</button>
         </form>
       </div>
-
+      <hr style="border-color:red;">
+<div class="container">
       <h3 class="text-center">CONTROL ENTRADAS</h3>
-        <div class="table-responsive-sm">
-          <table class="table table-sm ">
+
+<div class="table-responsive">
+          <table class="table table-hover">
             <thead>
-              <tr>
+              <tr >
+
                 <th scope="col">TEMPERATURA [°C]</th>
                 <th scope="col">HUMEDAD</th>
                 <th scope="col">LUZ</th>
+
               </tr>
             </thead>
 
@@ -45,17 +52,17 @@
                 {
                   echo '<tr>';
 
-                  echo '<td>';
+                  echo "<td class=\"text-justify\">";
                   echo $dato['temp'];
-                  echo '</td>';
+                  echo '  </td>';
 
-                  echo '<td>';
+                    echo "<td class=\"text-justify\">";
                   echo $dato['hum'];
-                  echo '</td>';
+                  echo '  </td>';
 
-                  echo '<td>';
+                    echo "<td class=\"text-justify\">";
                   echo $dato['lux'];
-                  echo '</td>';
+                  echo  '  </td>';
 
 
                   echo '</tr>';
@@ -63,10 +70,11 @@
               ?>
              </tbody>
           </table>
+</div>
           <p class="text-justify">  </p>
+</div>
 
-
-
+<hr style="border-color:red;">
 
 
 
@@ -77,5 +85,5 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     </body>
-    
+
 </html>
