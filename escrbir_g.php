@@ -7,7 +7,7 @@ $conn = new mysqli("127.0.0.1", "root", "", "luciano");
 if ($conn->connect_error) {
     die("error: " . $conn->connect_error);
 }
-$result = $conn->query("SELECT Target1, Target2, Target3 FROM devices WHERE `ID`=1;");
+$result = $conn->query("SELECT * FROM devices WHERE `ID`=1;");
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $target1 = $row["Target1"];

@@ -11,19 +11,59 @@
       <title>Hello, world!</title>
     </head>
 
-
-
-
     <body>
       <?php
         include_once 'escrbir_g.php';
       ?>
-
+      
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <input type="submit" name="target1" value="Target 1" class="btn btn-primary"></button>
           <input type="submit" name="target2" value="Target 2" class="btn btn-primary"></button>
           <input type="submit" name="target3" value="Target 3" class="btn btn-primary"></button>
       </form>
+      <h3 class="text-center">ET N ° 12</h3>
+      <div class="table-responsive-sm">
+        <table class="table table-sm ">
+          <thead>
+            <tr>
+              <th scope="col">TEMPERATURA [°C]</th>
+              <th scope="col">HUMEDAD</th>
+              <th scope="col">LUZ</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php
+              foreach($result as $dato)
+              {
+                echo '<tr>';
+
+                echo '<td>';
+                echo $dato['temp'];
+                echo '</td>';
+
+                echo '<td>';
+                echo $dato['hum'];
+                echo '</td>';
+
+                echo '<td>';
+                echo $dato['lux'];
+                echo '</td>';
+
+
+                echo '</tr>';
+              }
+            ?>
+           </tbody>
+        </table>
+        <p class="text-justify">  </p>
+
+
+
+
+
+
+
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
