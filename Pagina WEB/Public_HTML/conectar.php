@@ -1,6 +1,6 @@
 <?php
 include_once 'conexion.php';
-$sql_leer = 'SELECT * FROM datos';
+$sql_leer = 'SELECT * FROM devices';
 $gsent = $pdo->prepare($sql_leer);
 $gsent->execute();
 $resultado = $gsent->fetchAll();
@@ -14,7 +14,7 @@ $resultado = $gsent->fetchAll();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-	
+
 	<title>Recopilacion Datos IOT</title>
   </head>
   <body class = "bg-info">
@@ -29,31 +29,31 @@ $resultado = $gsent->fetchAll();
 				  <th scope="col">LUZ</th>
 				</tr>
 			</thead>
-			 
+
 			<tbody>
-				<?php 
+				<?php
 					foreach($resultado as $dato)
 					{
 						echo '<tr>';
-						
-						
+
+
 						echo '<th scope="row">';
-						echo $dato['id']; 
+						echo $dato['id'];
 						echo '</th>';
-					
+
 						echo '<td>';
-						echo $dato['temp']; 
+						echo $dato['temp'];
 						echo '</td>';
-					
+
 						echo '<td>';
-						echo $dato['hum']; 
+						echo $dato['hum'];
 						echo '</td>';
-						
+
 						echo '<td>';
-						echo $dato['lux']; 
+						echo $dato['lux'];
 						echo '</td>';
-					
-						
+
+
 						echo '</tr>';
 					}
 				?>

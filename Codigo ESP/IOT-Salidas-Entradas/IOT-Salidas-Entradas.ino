@@ -5,7 +5,7 @@
 #define DHTPIN            2        
 #define DHTTYPE           DHT11    
 DHT dht(DHTPIN, DHTTYPE);
-
+// Cambiar aca!
 const char* ssid        = "Fibertel WiFi017 2.4GHz";
 const char* password    = "0102017365";
 //const char* ssid        = "Telecentro-6648";

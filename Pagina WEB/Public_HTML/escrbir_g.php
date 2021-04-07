@@ -12,10 +12,10 @@ $c_3="\"btn btn-success\"";
 
 $textfile = "LEDstate.txt";
 
-$fileLocation = "$textfile";
-$fh = fopen($fileLocation, 'w   ') or die("Algo Fallo"); // Esto abre el archivo .txt para escribir y remplaza su contenido
-
-$conn = new mysqli("127.0.0.1", "root", "", "luciano");
+$fileLocation = $textfile;
+$fh = fopen($fileLocation, "w+") or die("Alvgo Fallo"); // Esto abre el archivo .txt para escribir y remplaza su contenido
+//CAMBIAR EL NOMBRE DE LA BASE DE DATOS ACA TAMBIEN!
+$conn = new mysqli("127.0.0.1", "root", "", "id");
 if ($conn->connect_error) {
     die("error: " . $conn->connect_error);
 }
