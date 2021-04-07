@@ -13,8 +13,8 @@
 //#define DHTTYPE           DHT22     // DHT 22 (AM2302)
 //#define DHTTYPE           DHT21     // DHT 21 (AM2301)
 DHT dht(DHTPIN, DHTTYPE);
-const char* ssid        = "Fibertel WiFi017 2.4GHz";
-const char* password    = "0102017365";
+const char* ssid        = "Fz";
+const char* password    = "xxxxx";
 const char* host        = "iotet12.000webhostapp.com";
 void setup() { Serial.begin(115200); delay(10); // We start by connecting to a WiFi network Serial.println();
 Serial.println(); Serial.print("Connecting to ");

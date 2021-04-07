@@ -6,10 +6,8 @@
 #define DHTTYPE           DHT11    
 DHT dht(DHTPIN, DHTTYPE);
 // Cambiar aca!
-const char* ssid        = "Fibertel WiFi017 2.4GHz";
-const char* password    = "0102017365";
-//const char* ssid        = "Telecentro-6648";
-//const char* password    = "tele-2347748";
+const char* ssid        = "Fz";
+const char* password    = "xxxxx";
 
 const char* host        = "iotet12.000webhostapp.com";
 
